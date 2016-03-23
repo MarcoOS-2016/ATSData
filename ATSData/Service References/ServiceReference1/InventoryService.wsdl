@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.dell.com/AvailableToSell/Inventory" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.dell.com/AvailableToSell/Inventory" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.dell.com/AvailableToSell/Inventory/Imports">
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd0" namespace="http://schemas.dell.com/AvailableToSell/Inventory" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Inventory" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="InventoryService_ReportInventoryBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReportInventoryBalance" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_ReportInventoryBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReportInventoryBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_ReportInventoryBalance_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q1:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_RepublishMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:RepublishMessage" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_RepublishMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RepublishMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_RepublishMessage_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q2:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_GetMaxMessageSequenceNumber_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxMessageSequenceNumber" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_GetMaxMessageSequenceNumber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMaxMessageSequenceNumberResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_GetMaxMessageSequenceNumber_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q3:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_AvailableToSellBySKU_InputMessage">
+    <wsdl:part name="parameters" element="tns:AvailableToSellBySKU" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_AvailableToSellBySKU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AvailableToSellBySKUResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_AvailableToSellBySKU_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q4:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_GetRegionalInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionalInventory" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_GetRegionalInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionalInventoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="InventoryService_GetRegionalInventory_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q5:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:portType name="InventoryService">
+    <wsdl:operation name="ReportInventoryBalance">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/ReportInventoryBalance" message="tns:InventoryService_ReportInventoryBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/ReportInventoryBalanceResponse" message="tns:InventoryService_ReportInventoryBalance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/ReportInventoryBalanceATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:InventoryService_ReportInventoryBalance_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RepublishMessage">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/RepublishMessage" message="tns:InventoryService_RepublishMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/RepublishMessageResponse" message="tns:InventoryService_RepublishMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/RepublishMessageATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:InventoryService_RepublishMessage_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMaxMessageSequenceNumber">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/GetMaxMessageSequenceNumber" message="tns:InventoryService_GetMaxMessageSequenceNumber_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/GetMaxMessageSequenceNumberResponse" message="tns:InventoryService_GetMaxMessageSequenceNumber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/GetMaxMessageSequenceNumberATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:InventoryService_GetMaxMessageSequenceNumber_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AvailableToSellBySKU">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/AvailableToSellBySKU" message="tns:InventoryService_AvailableToSellBySKU_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/AvailableToSellBySKUResponse" message="tns:InventoryService_AvailableToSellBySKU_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/AvailableToSellBySKUATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:InventoryService_AvailableToSellBySKU_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionalInventory">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/GetRegionalInventory" message="tns:InventoryService_GetRegionalInventory_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/GetRegionalInventoryResponse" message="tns:InventoryService_GetRegionalInventory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Inventory/InventoryService/GetRegionalInventoryATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:InventoryService_GetRegionalInventory_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

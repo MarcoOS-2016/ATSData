@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="772d4022-2eea-4116-9620-6e2c36ca3133" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ATSUtilityService.disco" MetadataType="Disco" ID="90bdab55-c898-40b4-8384-b69ad86b397e" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?disco" />
+    <MetadataFile FileName="ATSUtilityService.xsd" MetadataType="Schema" ID="6cd1becb-b54d-41d7-a5f5-2c5fb7b03eb5" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ATSUtilityService1.xsd" MetadataType="Schema" ID="919265fb-0c63-41c0-9582-2c701d8fce2d" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ATSUtilityService2.xsd" MetadataType="Schema" ID="97a3c380-e7b1-4716-a4de-098701aeafd7" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ATSUtilityService3.xsd" MetadataType="Schema" ID="04a28e53-5600-4636-a7ed-fc5c7bb9b136" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ATSUtilityService.wsdl" MetadataType="Wsdl" ID="567d0202-9cac-4d64-9775-ddfbd172d5a3" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ATSUtilityService1.wsdl" MetadataType="Wsdl" ID="0f90b037-27bf-4e1a-9875-c6f04db5749a" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

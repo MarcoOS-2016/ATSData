@@ -1,0 +1,1916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.dell.com/AvailableToSell/Dashboard" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DashboardService" targetNamespace="http://schemas.dell.com/AvailableToSell/Dashboard" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.dell.com/AvailableToSell/Dashboard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" />
+      <xs:element name="FetchProducts">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q1:DashboardRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchProductsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchProductsResult" nillable="true" type="q2:ArrayOfDashboard" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetApplicationList">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetApplicationListResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetApplicationListResult" nillable="true" type="q3:ArrayOfApplication" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFamilies">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFamiliesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetFamiliesResult" nillable="true" type="q4:ArrayOfFamily" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBrands">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetBrandsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetBrandsResult" nillable="true" type="q5:ArrayOfBrand" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllCatalogs">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetAllCatalogsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetAllCatalogsResult" nillable="true" type="q6:ArrayOfCatalogRegion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetProductLines">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetProductLinesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetProductLinesResult" nillable="true" type="q7:ArrayOfProductLine" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFilterInfo">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetFilterInfoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetFilterInfoResult" nillable="true" type="q8:ArrayOfSalesViewFilter" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPredefinedValues">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="ConfigID" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetPredefinedValuesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetPredefinedValuesResult" nillable="true" type="q9:ArrayOfPredefinedConfiguration" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRuleDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="configID" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRuleDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetRuleDetailsResult" nillable="true" type="q10:ApplicationConfiguration" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRuleConfigurations">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetRuleConfigurationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetRuleConfigurationsResult" nillable="true" type="q11:ArrayOfApplicationConfiguration" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetConfigurationDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="configID" type="xs:long" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetConfigurationDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetConfigurationDetailsResult" nillable="true" type="q12:ApplicationConfiguration" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetApplicationConfigurations">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetApplicationConfigurationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetApplicationConfigurationsResult" nillable="true" type="q13:ArrayOfApplicationConfiguration" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SaveConfiguration">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q14:ConfigurationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="SaveConfigurationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="SaveConfigurationResult" nillable="true" type="q15:ConfigurationResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchRegionForSKU">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q16:RegionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchRegionForSKUResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchRegionForSKUResult" nillable="true" type="q17:RegionForNotification" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchProductNotification">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q18:ProdNotificationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchProductNotificationResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchProductNotificationResult" nillable="true" type="q19:ArrayOfProdNotification" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCountries">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCountriesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchCountriesResult" nillable="true" type="q20:ArrayOfMasterCountry" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchProductTypes">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchProductTypesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchProductTypesResult" nillable="true" type="q21:ArrayOfMasterProductType" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchRegions">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchRegionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchRegionsResult" nillable="true" type="q22:ArrayOfMasterRegion" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchFullFillment">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchFullFillmentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchFullFillmentResult" nillable="true" type="q23:ArrayOfMasterFullFillment" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCountries">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q24:CreateCountryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddCountriesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="AddCountriesResult" nillable="true" type="q25:CreateCountryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCountries">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q26:CreateCountryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateCountriesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="UpdateCountriesResult" nillable="true" type="q27:CreateCountryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCountries">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q28:CreateCountryRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteCountriesResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="DeleteCountriesResult" nillable="true" type="q29:CreateCountryResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRegions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q30:CreateRegionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddRegionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="AddRegionsResult" nillable="true" type="q31:CreateRegionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateRegions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q32:CreateRegionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateRegionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="UpdateRegionsResult" nillable="true" type="q33:CreateRegionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRegions">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q34:CreateRegionRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteRegionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="DeleteRegionsResult" nillable="true" type="q35:CreateRegionResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddFulFillmentLocations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q36:CreateFulFillmentLocationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="AddFulFillmentLocationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="AddFulFillmentLocationsResult" nillable="true" type="q37:CreateFulFillmentLocationResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateFulFillmentLocations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q38:CreateFulFillmentLocationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="UpdateFulFillmentLocationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="UpdateFulFillmentLocationsResult" nillable="true" type="q39:CreateFulFillmentLocationResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteFulFillmentLocations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q40:CreateFulFillmentLocationRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="DeleteFulFillmentLocationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="DeleteFulFillmentLocationsResult" nillable="true" type="q41:CreateFulFillmentLocationResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchInventoryStatus">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchInventoryStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchInventoryStatusResult" nillable="true" type="q42:ArrayOfInventoryStatusItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchSalesChannelStatus">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchSalesChannelStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchSalesChannelStatusResult" nillable="true" type="q43:ArrayOfSalesChannelItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchSellActions">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchSellActionsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchSellActionsResult" nillable="true" type="q44:ArrayOfSellActionItem" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchPostCheckoutDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="fetchReservationDetailsRequest" nillable="true" type="q45:FetchReservationDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchPostCheckoutDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchPostCheckoutDetailsResult" nillable="true" type="q46:FetchPostCheckoutDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCommitDetails">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="fetchReservationDetailsRequest" nillable="true" type="q47:FetchReservationDetailsRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FetchCommitDetailsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchCommitDetailsResult" nillable="true" type="q48:FetchCommitDetailsResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FulfillOrders">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="fulfillOrdersRequest" nillable="true" type="q49:FulfillOrdersRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="FulfillOrdersResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FulfillOrdersResult" nillable="true" type="q50:FulfillOrdersResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelOrder">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="CancelOrderRequese" nillable="true" type="q51:CancelOrderRequest" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="CancelOrderResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="CancelOrderResult" nillable="true" type="q52:CancelOrderResponse" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xs:complexType name="DashboardRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryId" type="xs:int" />
+          <xs:element minOccurs="0" name="FGAorPartNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsActive" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegionId" type="xs:int" />
+          <xs:element minOccurs="0" name="SDSEnabled" nillable="true" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesChannel" type="xs:int" />
+          <xs:element minOccurs="0" name="SellAction" type="xs:int" />
+          <xs:element minOccurs="0" name="StockStatus" type="xs:int" />
+          <xs:element minOccurs="0" name="Type" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="DashboardRequest" nillable="true" type="tns:DashboardRequest" />
+      <xs:complexType name="ArrayOfDashboard">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Dashboard" nillable="true" type="tns:Dashboard" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfDashboard" nillable="true" type="tns:ArrayOfDashboard" />
+      <xs:complexType name="Dashboard">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:int" />
+          <xs:element minOccurs="0" name="Available" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Buffer" type="xs:int" />
+          <xs:element minOccurs="0" name="Catalog" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColorDOS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColorEightDOS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColorOffline" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColorSevenDOS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColorTwentyEightDOS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CellColorTwentyFourDOS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Committed" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultLeadTime" type="xs:int" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DisplayLeadTime" type="xs:int" />
+          <xs:element minOccurs="0" name="DisplayLowInventory" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EightHours" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtendedLeadTime" type="xs:int" />
+          <xs:element minOccurs="0" name="FGAId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FastTrackEligible" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="InOversell" type="xs:int" />
+          <xs:element minOccurs="0" name="InOversellOffLine" type="xs:int" />
+          <xs:element minOccurs="0" name="Inventory" type="xs:int" />
+          <xs:element minOccurs="0" name="InventoryLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryLevelOffline" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryStatusOffLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryStockStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InventoryStockStatusOffLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsFGA" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LowStock" type="xs:int" />
+          <xs:element minOccurs="0" name="OK" type="xs:int" />
+          <xs:element minOccurs="0" name="OfferType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OneHour" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalCellColor" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalCellColorOffline" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalInventoryStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OriginalInventoryStatusOffLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Oversold" type="xs:int" />
+          <xs:element minOccurs="0" name="PostCheckout" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PreCheckout" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="PreReservation" type="xs:int" />
+          <xs:element minOccurs="0" name="ProdActiveDetail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductCountryId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RegionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="SDSEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesChannelDesc" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SalesChannelId" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesViewVisibility" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellAction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SellActionOffLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SevenDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ShipmentTransitQty" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="StatusChange" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="TwentyEightDays" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TwentyFourHours" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Dashboard" nillable="true" type="tns:Dashboard" />
+      <xs:complexType name="ArrayOfApplication">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Application" nillable="true" type="tns:Application" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfApplication" nillable="true" type="tns:ArrayOfApplication" />
+      <xs:complexType name="Application">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:long" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Application" nillable="true" type="tns:Application" />
+      <xs:complexType name="ArrayOfFamily">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Family" nillable="true" type="tns:Family" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfFamily" nillable="true" type="tns:ArrayOfFamily" />
+      <xs:complexType name="Family">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Family" nillable="true" type="tns:Family" />
+      <xs:complexType name="ArrayOfBrand">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Brand" nillable="true" type="tns:Brand" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfBrand" nillable="true" type="tns:ArrayOfBrand" />
+      <xs:complexType name="Brand">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductLineID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Brand" nillable="true" type="tns:Brand" />
+      <xs:complexType name="ArrayOfCatalogRegion">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="CatalogRegion" nillable="true" type="tns:CatalogRegion" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCatalogRegion" nillable="true" type="tns:ArrayOfCatalogRegion" />
+      <xs:complexType name="CatalogRegion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CatalogID" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CatalogRegion" nillable="true" type="tns:CatalogRegion" />
+      <xs:complexType name="ArrayOfProductLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ProductLine" nillable="true" type="tns:ProductLine" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfProductLine" nillable="true" type="tns:ArrayOfProductLine" />
+      <xs:complexType name="ProductLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ID" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProductLine" nillable="true" type="tns:ProductLine" />
+      <xs:complexType name="ArrayOfSalesViewFilter">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesViewFilter" nillable="true" type="tns:SalesViewFilter" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfSalesViewFilter" nillable="true" type="tns:ArrayOfSalesViewFilter" />
+      <xs:complexType name="SalesViewFilter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BrandID" type="xs:int" />
+          <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+          <xs:element minOccurs="0" name="CatalogName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FamilyID" type="xs:int" />
+          <xs:element minOccurs="0" name="FamilyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProductLineID" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SalesViewFilter" nillable="true" type="tns:SalesViewFilter" />
+      <xs:complexType name="ArrayOfPredefinedConfiguration">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="PredefinedConfiguration" nillable="true" type="tns:PredefinedConfiguration" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfPredefinedConfiguration" nillable="true" type="tns:ArrayOfPredefinedConfiguration" />
+      <xs:complexType name="PredefinedConfiguration">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ID" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="PredefinedConfiguration" nillable="true" type="tns:PredefinedConfiguration" />
+      <xs:complexType name="ApplicationConfiguration">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationID" type="xs:int" />
+          <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigID" type="xs:long" />
+          <xs:element minOccurs="0" name="ConfigName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConfigValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreDefinitionCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreDefinitionID" type="xs:long" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ApplicationConfiguration" nillable="true" type="tns:ApplicationConfiguration" />
+      <xs:complexType name="ArrayOfApplicationConfiguration">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ApplicationConfiguration" nillable="true" type="tns:ApplicationConfiguration" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfApplicationConfiguration" nillable="true" type="tns:ArrayOfApplicationConfiguration" />
+      <xs:complexType name="ConfigurationRequest">
+        <xs:sequence>
+          <xs:element name="Active" type="xs:boolean" />
+          <xs:element name="ApplicationID" type="xs:int" />
+          <xs:element name="ConfigID" type="xs:long" />
+          <xs:element name="ConfigName" nillable="true" type="xs:string" />
+          <xs:element name="ConfigValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PredefinitionCode" nillable="true" type="xs:string" />
+          <xs:element name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConfigurationRequest" nillable="true" type="tns:ConfigurationRequest" />
+      <xs:complexType name="ConfigurationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ConfigurationResponse" nillable="true" type="tns:ConfigurationResponse" />
+      <xs:complexType name="RegionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RegionRequest" nillable="true" type="tns:RegionRequest" />
+      <xs:complexType name="RegionForNotification">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RegionForNotification" nillable="true" type="tns:RegionForNotification" />
+      <xs:complexType name="ProdNotificationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RegionId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProdNotificationRequest" nillable="true" type="tns:ProdNotificationRequest" />
+      <xs:complexType name="ArrayOfProdNotification">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ProdNotification" nillable="true" type="tns:ProdNotification" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfProdNotification" nillable="true" type="tns:ArrayOfProdNotification" />
+      <xs:complexType name="ProdNotification">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreationDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Id" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Info" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NotificationType" type="xs:int" />
+          <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ProdNotification" nillable="true" type="tns:ProdNotification" />
+      <xs:complexType name="ArrayOfMasterCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MasterCountry" nillable="true" type="tns:MasterCountry" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfMasterCountry" nillable="true" type="tns:ArrayOfMasterCountry" />
+      <xs:complexType name="MasterCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ATSRegionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasterCountry" nillable="true" type="tns:MasterCountry" />
+      <xs:complexType name="ArrayOfMasterProductType">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MasterProductType" nillable="true" type="tns:MasterProductType" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfMasterProductType" nillable="true" type="tns:ArrayOfMasterProductType" />
+      <xs:complexType name="MasterProductType">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasterProductType" nillable="true" type="tns:MasterProductType" />
+      <xs:complexType name="ArrayOfMasterRegion">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MasterRegion" nillable="true" type="tns:MasterRegion" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfMasterRegion" nillable="true" type="tns:ArrayOfMasterRegion" />
+      <xs:complexType name="MasterRegion">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CatalogId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="RegionCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasterRegion" nillable="true" type="tns:MasterRegion" />
+      <xs:complexType name="ArrayOfMasterFullFillment">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="MasterFullFillment" nillable="true" type="tns:MasterFullFillment" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfMasterFullFillment" nillable="true" type="tns:ArrayOfMasterFullFillment" />
+      <xs:complexType name="MasterFullFillment">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullFillmentCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullFillmentDescription" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FullFillmentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="id" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasterFullFillment" nillable="true" type="tns:MasterFullFillment" />
+      <xs:complexType name="CreateCountryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ATSRegionId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateCountryRequest" nillable="true" type="tns:CreateCountryRequest" />
+      <xs:complexType name="CreateCountryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CountryCheck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateCountryResponse" nillable="true" type="tns:CreateCountryResponse" />
+      <xs:complexType name="CreateRegionRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CatalogId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateRegionRequest" nillable="true" type="tns:CreateRegionRequest" />
+      <xs:complexType name="CreateRegionResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="RegionCheck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateRegionResponse" nillable="true" type="tns:CreateRegionResponse" />
+      <xs:complexType name="CreateFulFillmentLocationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Active" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FacilityCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FulFillmentLocationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateFulFillmentLocationRequest" nillable="true" type="tns:CreateFulFillmentLocationRequest" />
+      <xs:complexType name="CreateFulFillmentLocationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FulFillmentCheck" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FulFillmentLocationName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CreateFulFillmentLocationResponse" nillable="true" type="tns:CreateFulFillmentLocationResponse" />
+      <xs:complexType name="ArrayOfInventoryStatusItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="InventoryStatusItem" nillable="true" type="tns:InventoryStatusItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfInventoryStatusItem" nillable="true" type="tns:ArrayOfInventoryStatusItem" />
+      <xs:complexType name="InventoryStatusItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="InventoryStatusItem" nillable="true" type="tns:InventoryStatusItem" />
+      <xs:complexType name="ArrayOfSalesChannelItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesChannelItem" nillable="true" type="tns:SalesChannelItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfSalesChannelItem" nillable="true" type="tns:ArrayOfSalesChannelItem" />
+      <xs:complexType name="SalesChannelItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SalesChannelId" type="xs:int" />
+          <xs:element minOccurs="0" name="SalesChannelIsActive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SalesChannelName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SalesChannelItem" nillable="true" type="tns:SalesChannelItem" />
+      <xs:complexType name="ArrayOfSellActionItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="SellActionItem" nillable="true" type="tns:SellActionItem" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfSellActionItem" nillable="true" type="tns:ArrayOfSellActionItem" />
+      <xs:complexType name="SellActionItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SellActionItem" nillable="true" type="tns:SellActionItem" />
+      <xs:complexType name="FetchReservationDetailsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProductCountryId" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FetchReservationDetailsRequest" nillable="true" type="tns:FetchReservationDetailsRequest" />
+      <xs:complexType name="FetchPostCheckoutDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReservationDetails" nillable="true" type="tns:ArrayOfReservationDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FetchPostCheckoutDetailsResponse" nillable="true" type="tns:FetchPostCheckoutDetailsResponse" />
+      <xs:complexType name="ArrayOfReservationDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservationDetails" nillable="true" type="tns:ReservationDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfReservationDetails" nillable="true" type="tns:ArrayOfReservationDetails" />
+      <xs:complexType name="ReservationDetails">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CommittedOn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IRN" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Quantity" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="ReservationID" type="ser:guid" />
+          <xs:element minOccurs="0" name="ReservedOn" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Segment" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToFulfillCheck" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ReservationDetails" nillable="true" type="tns:ReservationDetails" />
+      <xs:complexType name="FetchCommitDetailsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReservationDetails" nillable="true" type="tns:ArrayOfReservationDetails" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FetchCommitDetailsResponse" nillable="true" type="tns:FetchCommitDetailsResponse" />
+      <xs:complexType name="FulfillOrdersRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrderNumbers" nillable="true" type="tns:ArrayOfOrderNumberDTO" />
+          <xs:element minOccurs="0" name="ProductCountryId" type="xs:int" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FulfillOrdersRequest" nillable="true" type="tns:FulfillOrdersRequest" />
+      <xs:complexType name="ArrayOfOrderNumberDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderNumberDTO" nillable="true" type="tns:OrderNumberDTO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfOrderNumberDTO" nillable="true" type="tns:ArrayOfOrderNumberDTO" />
+      <xs:complexType name="OrderNumberDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrderNumber" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="OrderNumberDTO" nillable="true" type="tns:OrderNumberDTO" />
+      <xs:complexType name="FulfillOrdersResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FulfillOrdersResponse" nillable="true" type="tns:FulfillOrdersResponse" />
+      <xs:complexType name="CancelOrderRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrderNumbers" nillable="true" type="tns:ArrayOfOrderNumberDTO" />
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CancelOrderRequest" nillable="true" type="tns:CancelOrderRequest" />
+      <xs:complexType name="CancelOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsSucess" type="xs:boolean" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="CancelOrderResponse" nillable="true" type="tns:CancelOrderResponse" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="ATSFaultDataContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ATSFaultDataContract" nillable="true" type="tns:ATSFaultDataContract" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="DashboardService_FetchProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProducts" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProducts_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q1:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetApplicationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationList" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetApplicationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetApplicationList_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q2:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetFamilies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamilies" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetFamilies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFamiliesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetBrands_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrands" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetBrands_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBrandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetAllCatalogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCatalogs" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetAllCatalogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCatalogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetProductLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLines" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetProductLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetFilterInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilterInfo" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetFilterInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilterInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetFilterInfo_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q3:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetPredefinedValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPredefinedValues" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetPredefinedValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPredefinedValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetPredefinedValues_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q4:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetRuleDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleDetails" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetRuleDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetRuleDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q5:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetRuleConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetRuleConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRuleConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetRuleConfigurations_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q6:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetConfigurationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigurationDetails" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetConfigurationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConfigurationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetConfigurationDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q7:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetApplicationConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetApplicationConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_GetApplicationConfigurations_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q8:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_SaveConfiguration_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveConfiguration" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_SaveConfiguration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveConfigurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_SaveConfiguration_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q9:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchRegionForSKU_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRegionForSKU" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchRegionForSKU_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRegionForSKUResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchRegionForSKU_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q10:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProductNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProductNotification" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProductNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProductNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProductNotification_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q11:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCountries" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchCountries_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q12:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProductTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProductTypes" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProductTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProductTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchProductTypes_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q13:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchRegions_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRegions" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchRegions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchRegions_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q14:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchFullFillment_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchFullFillment" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchFullFillment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchFullFillmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchFullFillment_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q15:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountries" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddCountries_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q16:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountries" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateCountries_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q17:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCountries" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteCountries_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q18:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddRegions_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegions" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddRegions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddRegions_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q19:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateRegions_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegions" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateRegions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateRegions_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q20:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteRegions_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegions" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteRegions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteRegions_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q21:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddFulFillmentLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddFulFillmentLocations" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddFulFillmentLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddFulFillmentLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_AddFulFillmentLocations_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q22:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateFulFillmentLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFulFillmentLocations" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateFulFillmentLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateFulFillmentLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_UpdateFulFillmentLocations_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q23:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteFulFillmentLocations_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFulFillmentLocations" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteFulFillmentLocations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteFulFillmentLocationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_DeleteFulFillmentLocations_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q24:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchInventoryStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchInventoryStatus" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchInventoryStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchInventoryStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchInventoryStatus_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q25:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchSalesChannelStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchSalesChannelStatus" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchSalesChannelStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchSalesChannelStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchSalesChannelStatus_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q26:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchSellActions_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchSellActions" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchSellActions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchSellActionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchSellActions_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q27:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchPostCheckoutDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchPostCheckoutDetails" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchPostCheckoutDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchPostCheckoutDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchPostCheckoutDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q28:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchCommitDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCommitDetails" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchCommitDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchCommitDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FetchCommitDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q29:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FulfillOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:FulfillOrders" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FulfillOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FulfillOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_FulfillOrders_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q30:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_CancelOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrder" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_CancelOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="DashboardService_CancelOrder_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q31:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:portType name="DashboardService">
+    <wsdl:operation name="FetchProducts">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProducts" message="tns:DashboardService_FetchProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductsResponse" message="tns:DashboardService_FetchProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchProducts_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationList" message="tns:DashboardService_GetApplicationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationListResponse" message="tns:DashboardService_GetApplicationList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationListATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetApplicationList_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFamilies">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFamilies" message="tns:DashboardService_GetFamilies_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFamiliesResponse" message="tns:DashboardService_GetFamilies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrands">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetBrands" message="tns:DashboardService_GetBrands_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetBrandsResponse" message="tns:DashboardService_GetBrands_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCatalogs">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetAllCatalogs" message="tns:DashboardService_GetAllCatalogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetAllCatalogsResponse" message="tns:DashboardService_GetAllCatalogs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLines">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetProductLines" message="tns:DashboardService_GetProductLines_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetProductLinesResponse" message="tns:DashboardService_GetProductLines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilterInfo">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFilterInfo" message="tns:DashboardService_GetFilterInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFilterInfoResponse" message="tns:DashboardService_GetFilterInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFilterInfoATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetFilterInfo_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPredefinedValues">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetPredefinedValues" message="tns:DashboardService_GetPredefinedValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetPredefinedValuesResponse" message="tns:DashboardService_GetPredefinedValues_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetPredefinedValuesATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetPredefinedValues_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleDetails" message="tns:DashboardService_GetRuleDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleDetailsResponse" message="tns:DashboardService_GetRuleDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetRuleDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleConfigurations">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleConfigurations" message="tns:DashboardService_GetRuleConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleConfigurationsResponse" message="tns:DashboardService_GetRuleConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleConfigurationsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetRuleConfigurations_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigurationDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetConfigurationDetails" message="tns:DashboardService_GetConfigurationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetConfigurationDetailsResponse" message="tns:DashboardService_GetConfigurationDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetConfigurationDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetConfigurationDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationConfigurations">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationConfigurations" message="tns:DashboardService_GetApplicationConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationConfigurationsResponse" message="tns:DashboardService_GetApplicationConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationConfigurationsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_GetApplicationConfigurations_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfiguration">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/SaveConfiguration" message="tns:DashboardService_SaveConfiguration_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/SaveConfigurationResponse" message="tns:DashboardService_SaveConfiguration_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/SaveConfigurationATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_SaveConfiguration_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchRegionForSKU">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegionForSKU" message="tns:DashboardService_FetchRegionForSKU_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegionForSKUResponse" message="tns:DashboardService_FetchRegionForSKU_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegionForSKUATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchRegionForSKU_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchProductNotification">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductNotification" message="tns:DashboardService_FetchProductNotification_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductNotificationResponse" message="tns:DashboardService_FetchProductNotification_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductNotificationATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchProductNotification_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCountries">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCountries" message="tns:DashboardService_FetchCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCountriesResponse" message="tns:DashboardService_FetchCountries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCountriesATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchCountries_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchProductTypes">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductTypes" message="tns:DashboardService_FetchProductTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductTypesResponse" message="tns:DashboardService_FetchProductTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductTypesATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchProductTypes_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchRegions">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegions" message="tns:DashboardService_FetchRegions_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegionsResponse" message="tns:DashboardService_FetchRegions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegionsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchRegions_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchFullFillment">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchFullFillment" message="tns:DashboardService_FetchFullFillment_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchFullFillmentResponse" message="tns:DashboardService_FetchFullFillment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchFullFillmentATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchFullFillment_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCountries">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddCountries" message="tns:DashboardService_AddCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddCountriesResponse" message="tns:DashboardService_AddCountries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddCountriesATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_AddCountries_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountries">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateCountries" message="tns:DashboardService_UpdateCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateCountriesResponse" message="tns:DashboardService_UpdateCountries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateCountriesATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_UpdateCountries_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCountries">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteCountries" message="tns:DashboardService_DeleteCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteCountriesResponse" message="tns:DashboardService_DeleteCountries_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteCountriesATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_DeleteCountries_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRegions">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddRegions" message="tns:DashboardService_AddRegions_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddRegionsResponse" message="tns:DashboardService_AddRegions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddRegionsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_AddRegions_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegions">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateRegions" message="tns:DashboardService_UpdateRegions_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateRegionsResponse" message="tns:DashboardService_UpdateRegions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateRegionsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_UpdateRegions_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegions">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteRegions" message="tns:DashboardService_DeleteRegions_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteRegionsResponse" message="tns:DashboardService_DeleteRegions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteRegionsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_DeleteRegions_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFulFillmentLocations">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddFulFillmentLocations" message="tns:DashboardService_AddFulFillmentLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddFulFillmentLocationsResponse" message="tns:DashboardService_AddFulFillmentLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddFulFillmentLocationsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_AddFulFillmentLocations_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFulFillmentLocations">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateFulFillmentLocations" message="tns:DashboardService_UpdateFulFillmentLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateFulFillmentLocationsResponse" message="tns:DashboardService_UpdateFulFillmentLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateFulFillmentLocationsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_UpdateFulFillmentLocations_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFulFillmentLocations">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteFulFillmentLocations" message="tns:DashboardService_DeleteFulFillmentLocations_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteFulFillmentLocationsResponse" message="tns:DashboardService_DeleteFulFillmentLocations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteFulFillmentLocationsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_DeleteFulFillmentLocations_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchInventoryStatus">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchInventoryStatus" message="tns:DashboardService_FetchInventoryStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchInventoryStatusResponse" message="tns:DashboardService_FetchInventoryStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchInventoryStatusATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchInventoryStatus_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchSalesChannelStatus">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSalesChannelStatus" message="tns:DashboardService_FetchSalesChannelStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSalesChannelStatusResponse" message="tns:DashboardService_FetchSalesChannelStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSalesChannelStatusATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchSalesChannelStatus_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchSellActions">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSellActions" message="tns:DashboardService_FetchSellActions_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSellActionsResponse" message="tns:DashboardService_FetchSellActions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSellActionsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchSellActions_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchPostCheckoutDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchPostCheckoutDetails" message="tns:DashboardService_FetchPostCheckoutDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchPostCheckoutDetailsResponse" message="tns:DashboardService_FetchPostCheckoutDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchPostCheckoutDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchPostCheckoutDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchCommitDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCommitDetails" message="tns:DashboardService_FetchCommitDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCommitDetailsResponse" message="tns:DashboardService_FetchCommitDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCommitDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FetchCommitDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FulfillOrders">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FulfillOrders" message="tns:DashboardService_FulfillOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FulfillOrdersResponse" message="tns:DashboardService_FulfillOrders_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FulfillOrdersATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_FulfillOrders_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/CancelOrder" message="tns:DashboardService_CancelOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/CancelOrderResponse" message="tns:DashboardService_CancelOrder_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/CancelOrderATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:DashboardService_CancelOrder_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_DashboardService" type="tns:DashboardService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FetchProducts">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProducts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationList">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFamilies">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFamilies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrands">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetBrands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCatalogs">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetAllCatalogs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductLines">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetProductLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFilterInfo">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetFilterInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPredefinedValues">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetPredefinedValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleDetails">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRuleConfigurations">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetRuleConfigurations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetConfigurationDetails">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetConfigurationDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationConfigurations">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/GetApplicationConfigurations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SaveConfiguration">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/SaveConfiguration" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchRegionForSKU">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegionForSKU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchProductNotification">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductNotification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCountries">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchProductTypes">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchProductTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchRegions">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchFullFillment">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchFullFillment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddCountries">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCountries">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCountries">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddRegions">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegions">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegions">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddFulFillmentLocations">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/AddFulFillmentLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFulFillmentLocations">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/UpdateFulFillmentLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFulFillmentLocations">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/DeleteFulFillmentLocations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchInventoryStatus">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchInventoryStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchSalesChannelStatus">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSalesChannelStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchSellActions">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchSellActions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchPostCheckoutDetails">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchPostCheckoutDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchCommitDetails">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FetchCommitDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FulfillOrders">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/FulfillOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelOrder">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Dashboard/DashboardService/CancelOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DashboardService">
+    <wsdl:port name="BasicHttpBinding_DashboardService" binding="tns:BasicHttpBinding_DashboardService">
+      <soap:address location="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

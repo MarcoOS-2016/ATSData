@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1616baa3-f743-4728-ac06-cd271d3e0720" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InventoryService.wsdl" MetadataType="Wsdl" ID="20897586-82ab-4a18-ab85-7966ce0568b6" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="InventoryService.xsd" MetadataType="Schema" ID="58cccf1a-0b70-4aa0-9fc3-959945041bc8" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd4" />
+    <MetadataFile FileName="InventoryService1.xsd" MetadataType="Schema" ID="013a6cad-d4d5-4cb0-932d-25f15676f5c5" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InventoryService2.xsd" MetadataType="Schema" ID="5b3626c1-8e57-4144-b1c0-99fd9fd03879" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InventoryService1.wsdl" MetadataType="Wsdl" ID="eecf20b4-73f2-4234-902e-a0da1223cdb8" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?wsdl" />
+    <MetadataFile FileName="InventoryService3.xsd" MetadataType="Schema" ID="3abe393f-64f4-4735-8161-a357aa36c022" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InventoryService4.xsd" MetadataType="Schema" ID="87ad1afb-059d-4a34-af0e-271a9b7ef80b" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InventoryService.disco" MetadataType="Disco" ID="7fab59bd-1dc8-4a9d-a278-bfab9b2fc225" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

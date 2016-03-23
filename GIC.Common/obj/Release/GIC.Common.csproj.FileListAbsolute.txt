@@ -1,0 +1,5 @@
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Common\bin\Release\GIC.Common.dll
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Common\bin\Release\GIC.Common.pdb
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Common\obj\Release\GIC.Common.csproj.ResolveComReference.cache
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Common\obj\Release\GIC.Common.dll
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Common\obj\Release\GIC.Common.pdb

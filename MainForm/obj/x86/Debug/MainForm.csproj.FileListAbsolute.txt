@@ -1,0 +1,16 @@
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\MainForm.Properties.Resources.resources
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\MainForm.exe
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\MainForm.pdb
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\ATSData.dll
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\ATSData.pdb
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\MainForm.exe
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\MainForm.pdb
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\MainForm.exe.config
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\App.config
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\Web.config
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\Web.Debug.config
+D:\Working\WorkShop\Projects\ATSData\MainForm\bin\Debug\Web.Release.config
+D:\Working\WorkShop\Projects\ATSData\MainForm\obj\x86\Debug\MainForm.MainForm.resources

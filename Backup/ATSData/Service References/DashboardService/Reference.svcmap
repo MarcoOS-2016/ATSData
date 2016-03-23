@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c62899c8-63d5-4ea6-9e64-0de33ab3eac1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DashboardService.wsdl" MetadataType="Wsdl" ID="8fd40c4d-fcc4-40f3-8ae1-2f2c0e175bde" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DashboardService.xsd" MetadataType="Schema" ID="234db5a8-b2ff-40db-a64d-475261cde1d6" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DashboardService1.xsd" MetadataType="Schema" ID="82e01ff7-ced8-4dd0-a061-3fae5aa01110" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DashboardService2.xsd" MetadataType="Schema" ID="96b57a42-9edf-4291-8da1-d656a652b7d5" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DashboardService3.xsd" MetadataType="Schema" ID="11ba1ee9-4911-4cef-b420-ce59e357c8fd" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DashboardService1.wsdl" MetadataType="Wsdl" ID="9cd8e460-fd0d-4579-8519-4c0ccb08d19e" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?wsdl" />
+    <MetadataFile FileName="DashboardService.disco" MetadataType="Disco" ID="be9fc525-a86e-4ab0-a650-0cbc9f8f646d" SourceId="1" SourceUrl="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

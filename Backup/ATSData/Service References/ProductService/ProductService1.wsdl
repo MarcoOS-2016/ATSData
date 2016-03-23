@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://schemas.dell.com/AvailableToSell/Products" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ProductService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://schemas.dell.com/AvailableToSell/Products" location="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ProductService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="BasicHttpBinding_ProductService" type="i0:ProductService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetProductInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/GetProductInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSalesViewVisibility">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateSalesViewVisibility" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProduct">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/AddProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateProduct">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountries">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/GetAllCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRegions">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/GetAllRegions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDefaults">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/GetProductDefaults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDefaultLimit">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateDefaultLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/SearchProductInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/DeleteProductInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FillCountryInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FillCountryInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FillRegionInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FillRegionInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FillFacilityInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FillFacilityInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="OnHandByLocationInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/OnHandByLocationInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="StatusHistoryInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/StatusHistoryInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LeadTimeHistoryInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/LeadTimeHistoryInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLimitInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateLimitInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDialySalesAndInventories">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/GetDialySalesAndInventories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellAction">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateSellAction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSellActionOffline">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateSellActionOffline" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePreReservation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdatePreReservation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLowMessageStatus">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/UpdateLowMessageStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchShipmentTransit">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FetchShipmentTransit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchProductFulfillments">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FetchProductFulfillments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AssignProdFulfillments">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/AssignProdFulfillments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddLeadTimeInformation">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/AddLeadTimeInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchDaysofSupply">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FetchDaysofSupply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FetchProductTypes">
+      <soap:operation soapAction="http://schemas.dell.com/AvailableToSell/Products/ProductService/FetchProductTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ATSFaultDataContractFault">
+        <soap:fault use="literal" name="ATSFaultDataContractFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ProductService">
+    <wsdl:port name="BasicHttpBinding_ProductService" binding="tns:BasicHttpBinding_ProductService">
+      <soap:address location="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ProductService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,12 @@
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\obj\Debug\GIC.Business.csprojResolveAssemblyReference.cache
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\Web.config
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\Web.Debug.config
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\Web.Release.config
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\GIC.Business.dll
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\GIC.Business.pdb
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\ATSData.dll
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\GIC.Common.dll
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\ATSData.pdb
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\bin\Debug\GIC.Common.pdb
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\obj\Debug\GIC.Business.dll
+D:\Working\WorkShop\Projects\6-ATSData\GIC.Business\obj\Debug\GIC.Business.pdb

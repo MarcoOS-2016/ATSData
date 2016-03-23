@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Inventory" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Inventory" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/InventoryService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services" />
+  <xs:complexType name="ReportInventoryBalanceRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemBalances" nillable="true" type="tns:ArrayOfReportInventoryBalanceRequest.ItemBalance" />
+      <xs:element minOccurs="0" name="MessageRequested" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MessageSequenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ReliefBatchId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ReportingDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SyncUpMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SyncUpRequestDateTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportInventoryBalanceRequest" nillable="true" type="tns:ReportInventoryBalanceRequest" />
+  <xs:complexType name="ArrayOfReportInventoryBalanceRequest.ItemBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportInventoryBalanceRequest.ItemBalance" nillable="true" type="tns:ReportInventoryBalanceRequest.ItemBalance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportInventoryBalanceRequest.ItemBalance" nillable="true" type="tns:ArrayOfReportInventoryBalanceRequest.ItemBalance" />
+  <xs:complexType name="ReportInventoryBalanceRequest.ItemBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AllLocationBalance" nillable="true" type="tns:ArrayOfReportInventoryBalanceRequest.ItemBalance.LocationBalance" />
+      <xs:element minOccurs="0" name="FGA" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FGAProxyMOD" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FGAProxySKU" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportInventoryBalanceRequest.ItemBalance" nillable="true" type="tns:ReportInventoryBalanceRequest.ItemBalance" />
+  <xs:complexType name="ArrayOfReportInventoryBalanceRequest.ItemBalance.LocationBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportInventoryBalanceRequest.ItemBalance.LocationBalance" nillable="true" type="tns:ReportInventoryBalanceRequest.ItemBalance.LocationBalance" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportInventoryBalanceRequest.ItemBalance.LocationBalance" nillable="true" type="tns:ArrayOfReportInventoryBalanceRequest.ItemBalance.LocationBalance" />
+  <xs:complexType name="ReportInventoryBalanceRequest.ItemBalance.LocationBalance">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LocationCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OnHandQuantity" type="xs:int" />
+      <xs:element minOccurs="0" name="ReliefOrders" nillable="true" type="tns:ArrayOfReportInventoryBalanceRequest.ItemBalance.ReliefOrder" />
+      <xs:element minOccurs="0" name="ShippedQuantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportInventoryBalanceRequest.ItemBalance.LocationBalance" nillable="true" type="tns:ReportInventoryBalanceRequest.ItemBalance.LocationBalance" />
+  <xs:complexType name="ArrayOfReportInventoryBalanceRequest.ItemBalance.ReliefOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportInventoryBalanceRequest.ItemBalance.ReliefOrder" nillable="true" type="tns:ReportInventoryBalanceRequest.ItemBalance.ReliefOrder" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportInventoryBalanceRequest.ItemBalance.ReliefOrder" nillable="true" type="tns:ArrayOfReportInventoryBalanceRequest.ItemBalance.ReliefOrder" />
+  <xs:complexType name="ReportInventoryBalanceRequest.ItemBalance.ReliefOrder">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrderNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportInventoryBalanceRequest.ItemBalance.ReliefOrder" nillable="true" type="tns:ReportInventoryBalanceRequest.ItemBalance.ReliefOrder" />
+  <xs:complexType name="ReportInventoryBalanceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportInventoryBalanceResponse" nillable="true" type="tns:ReportInventoryBalanceResponse" />
+  <xs:complexType name="RepublishMessageRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCN" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SequenceNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepublishMessageRequest" nillable="true" type="tns:RepublishMessageRequest" />
+  <xs:complexType name="RepublishMessageResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MessageResponse" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RepublishMessageResponse" nillable="true" type="tns:RepublishMessageResponse" />
+  <xs:complexType name="GetMaxMessageSequenceNumberRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CCN" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMaxMessageSequenceNumberRequest" nillable="true" type="tns:GetMaxMessageSequenceNumberRequest" />
+  <xs:complexType name="GetMaxMessageSequenceNumberResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsCallSuccessful" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaxMessageSequenceNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetMaxMessageSequenceNumberResponse" nillable="true" type="tns:GetMaxMessageSequenceNumberResponse" />
+  <xs:complexType name="AvailableToSellBySKURequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SKU" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AvailableToSellBySKURequest" nillable="true" type="tns:AvailableToSellBySKURequest" />
+  <xs:complexType name="AvailableToSellBySKUResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services" minOccurs="0" name="Product" nillable="true" type="q1:ProductATS" />
+      <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AvailableToSellBySKUResponse" nillable="true" type="tns:AvailableToSellBySKUResponse" />
+  <xs:complexType name="GetRegionalInventoryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Region" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegionalInventoryRequest" nillable="true" type="tns:GetRegionalInventoryRequest" />
+  <xs:complexType name="GetRegionalInventoryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InventoryItems" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Successful" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetRegionalInventoryResponse" nillable="true" type="tns:GetRegionalInventoryResponse" />
+</xs:schema>

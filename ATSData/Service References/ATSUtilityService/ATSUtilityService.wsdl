@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.dell.com/AvailableToSell/Utilities" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.dell.com/AvailableToSell/Utilities" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.dell.com/AvailableToSell/Utilities/Imports">
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd0" namespace="http://schemas.dell.com/AvailableToSell/Utilities" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/ATSUtilityService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Utilities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ATSUtilityService_GetProductEventLogInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductEventLogInformation" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductEventLogInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductEventLogInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductEventLogInformation_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q1:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductDetails" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q2:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetRegionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionList" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetRegionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetRegionList_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q3:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetCountryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryList" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetCountryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetCountryList_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q4:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetPreCheckOutReportRatio_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreCheckOutReportRatio" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetPreCheckOutReportRatio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPreCheckOutReportRatioResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetPreCheckOutReportRatio_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q5:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetSalesProducts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesProducts" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetSalesProducts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalesProductsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetSalesProducts_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q6:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductSalesHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSalesHistory" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductSalesHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductSalesHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetProductSalesHistory_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q7:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetInTransitHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInTransitHistory" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetInTransitHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInTransitHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetInTransitHistory_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q8:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PremierReferenceSegments_InputMessage">
+    <wsdl:part name="parameters" element="tns:PremierReferenceSegments" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PremierReferenceSegments_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PremierReferenceSegmentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PremierReferenceSegments_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q9:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PutIntransitInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutIntransitInfo" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PutIntransitInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutIntransitInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PutIntransitInfo_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q10:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GOPProcessOnHand_InputMessage">
+    <wsdl:part name="parameters" element="tns:GOPProcessOnHand" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GOPProcessOnHand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GOPProcessOnHandResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GOPProcessOnHand_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q11:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PutReliefOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:PutReliefOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PutReliefOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PutReliefOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_PutReliefOrderInfo_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q12:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetTransactionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetTransactionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetTransactionDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q13:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetDBJobDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDBJobDetails" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetDBJobDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDBJobDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_GetDBJobDetails_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q14:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_RunTheDBJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:RunTheDBJob" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_RunTheDBJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RunTheDBJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="ATSUtilityService_RunTheDBJob_ATSFaultDataContractFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.FaultContract" name="detail" element="q15:ATSFaultDataContract" />
+  </wsdl:message>
+  <wsdl:portType name="ATSUtilityService">
+    <wsdl:operation name="GetProductEventLogInformation">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductEventLogInformation" message="tns:ATSUtilityService_GetProductEventLogInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductEventLogInformationResponse" message="tns:ATSUtilityService_GetProductEventLogInformation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductEventLogInformationATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetProductEventLogInformation_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductDetails" message="tns:ATSUtilityService_GetProductDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductDetailsResponse" message="tns:ATSUtilityService_GetProductDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetProductDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionList">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetRegionList" message="tns:ATSUtilityService_GetRegionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetRegionListResponse" message="tns:ATSUtilityService_GetRegionList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetRegionListATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetRegionList_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetCountryList" message="tns:ATSUtilityService_GetCountryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetCountryListResponse" message="tns:ATSUtilityService_GetCountryList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetCountryListATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetCountryList_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPreCheckOutReportRatio">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetPreCheckOutReportRatio" message="tns:ATSUtilityService_GetPreCheckOutReportRatio_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetPreCheckOutReportRatioResponse" message="tns:ATSUtilityService_GetPreCheckOutReportRatio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetPreCheckOutReportRatioATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetPreCheckOutReportRatio_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalesProducts">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetSalesProducts" message="tns:ATSUtilityService_GetSalesProducts_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetSalesProductsResponse" message="tns:ATSUtilityService_GetSalesProducts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetSalesProductsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetSalesProducts_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductSalesHistory">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductSalesHistory" message="tns:ATSUtilityService_GetProductSalesHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductSalesHistoryResponse" message="tns:ATSUtilityService_GetProductSalesHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetProductSalesHistoryATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetProductSalesHistory_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInTransitHistory">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetInTransitHistory" message="tns:ATSUtilityService_GetInTransitHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetInTransitHistoryResponse" message="tns:ATSUtilityService_GetInTransitHistory_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetInTransitHistoryATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetInTransitHistory_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PremierReferenceSegments">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PremierReferenceSegments" message="tns:ATSUtilityService_PremierReferenceSegments_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PremierReferenceSegmentsResponse" message="tns:ATSUtilityService_PremierReferenceSegments_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PremierReferenceSegmentsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_PremierReferenceSegments_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutIntransitInfo">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PutIntransitInfo" message="tns:ATSUtilityService_PutIntransitInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PutIntransitInfoResponse" message="tns:ATSUtilityService_PutIntransitInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PutIntransitInfoATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_PutIntransitInfo_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GOPProcessOnHand">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GOPProcessOnHand" message="tns:ATSUtilityService_GOPProcessOnHand_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GOPProcessOnHandResponse" message="tns:ATSUtilityService_GOPProcessOnHand_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GOPProcessOnHandATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GOPProcessOnHand_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PutReliefOrderInfo">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PutReliefOrderInfo" message="tns:ATSUtilityService_PutReliefOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PutReliefOrderInfoResponse" message="tns:ATSUtilityService_PutReliefOrderInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/PutReliefOrderInfoATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_PutReliefOrderInfo_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetTransactionDetails" message="tns:ATSUtilityService_GetTransactionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetTransactionDetailsResponse" message="tns:ATSUtilityService_GetTransactionDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetTransactionDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetTransactionDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDBJobDetails">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetDBJobDetails" message="tns:ATSUtilityService_GetDBJobDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetDBJobDetailsResponse" message="tns:ATSUtilityService_GetDBJobDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/GetDBJobDetailsATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_GetDBJobDetails_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RunTheDBJob">
+      <wsdl:input wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/RunTheDBJob" message="tns:ATSUtilityService_RunTheDBJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/RunTheDBJobResponse" message="tns:ATSUtilityService_RunTheDBJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.dell.com/AvailableToSell/Utilities/ATSUtilityService/RunTheDBJobATSFaultDataContractFault" name="ATSFaultDataContractFault" message="tns:ATSUtilityService_RunTheDBJob_ATSFaultDataContractFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

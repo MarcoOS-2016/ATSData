@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.dell.com/AvailableToSell/Dashboard" elementFormDefault="qualified" targetNamespace="http://schemas.dell.com/AvailableToSell/Dashboard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://atsservice.dell.com/Dell.AvailableToSell.ServiceHost/DashboardService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" />
+  <xs:element name="FetchProducts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q1:DashboardRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProductsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchProductsResult" nillable="true" type="q2:ArrayOfDashboard" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetApplicationListResult" nillable="true" type="q3:ArrayOfApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFamilies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFamiliesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetFamiliesResult" nillable="true" type="q4:ArrayOfFamily" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrands">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBrandsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetBrandsResult" nillable="true" type="q5:ArrayOfBrand" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCatalogs">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCatalogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetAllCatalogsResult" nillable="true" type="q6:ArrayOfCatalogRegion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductLines">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CatalogID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProductLinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetProductLinesResult" nillable="true" type="q7:ArrayOfProductLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilterInfo">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilterInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetFilterInfoResult" nillable="true" type="q8:ArrayOfSalesViewFilter" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPredefinedValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ConfigID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPredefinedValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetPredefinedValuesResult" nillable="true" type="q9:ArrayOfPredefinedConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="configID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetRuleDetailsResult" nillable="true" type="q10:ApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleConfigurations">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleConfigurationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetRuleConfigurationsResult" nillable="true" type="q11:ArrayOfApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigurationDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="configID" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConfigurationDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetConfigurationDetailsResult" nillable="true" type="q12:ApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigurations">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigurationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetApplicationConfigurationsResult" nillable="true" type="q13:ArrayOfApplicationConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveConfiguration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q14:ConfigurationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="SaveConfigurationResult" nillable="true" type="q15:ConfigurationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRegionForSKU">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q16:RegionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRegionForSKUResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchRegionForSKUResult" nillable="true" type="q17:RegionForNotification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProductNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q18:ProdNotificationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProductNotificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchProductNotificationResult" nillable="true" type="q19:ArrayOfProdNotification" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCountries">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchCountriesResult" nillable="true" type="q20:ArrayOfMasterCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProductTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProductTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchProductTypesResult" nillable="true" type="q21:ArrayOfMasterProductType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRegions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchRegionsResult" nillable="true" type="q22:ArrayOfMasterRegion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchFullFillment">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchFullFillmentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchFullFillmentResult" nillable="true" type="q23:ArrayOfMasterFullFillment" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCountries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q24:CreateCountryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="AddCountriesResult" nillable="true" type="q25:CreateCountryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCountries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q26:CreateCountryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="UpdateCountriesResult" nillable="true" type="q27:CreateCountryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCountries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q28:CreateCountryRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteCountriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="DeleteCountriesResult" nillable="true" type="q29:CreateCountryResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRegions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q30:CreateRegionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="AddRegionsResult" nillable="true" type="q31:CreateRegionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q32:CreateRegionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="UpdateRegionsResult" nillable="true" type="q33:CreateRegionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRegions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q34:CreateRegionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRegionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="DeleteRegionsResult" nillable="true" type="q35:CreateRegionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFulFillmentLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q36:CreateFulFillmentLocationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddFulFillmentLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="AddFulFillmentLocationsResult" nillable="true" type="q37:CreateFulFillmentLocationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFulFillmentLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q38:CreateFulFillmentLocationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateFulFillmentLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="UpdateFulFillmentLocationsResult" nillable="true" type="q39:CreateFulFillmentLocationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFulFillmentLocations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="request" nillable="true" type="q40:CreateFulFillmentLocationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteFulFillmentLocationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="DeleteFulFillmentLocationsResult" nillable="true" type="q41:CreateFulFillmentLocationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInventoryStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchInventoryStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchInventoryStatusResult" nillable="true" type="q42:ArrayOfInventoryStatusItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSalesChannelStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSalesChannelStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchSalesChannelStatusResult" nillable="true" type="q43:ArrayOfSalesChannelItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSellActions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchSellActionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchSellActionsResult" nillable="true" type="q44:ArrayOfSellActionItem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPostCheckoutDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="fetchReservationDetailsRequest" nillable="true" type="q45:FetchReservationDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchPostCheckoutDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchPostCheckoutDetailsResult" nillable="true" type="q46:FetchPostCheckoutDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCommitDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="fetchReservationDetailsRequest" nillable="true" type="q47:FetchReservationDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCommitDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchCommitDetailsResult" nillable="true" type="q48:FetchCommitDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FulfillOrders">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="fulfillOrdersRequest" nillable="true" type="q49:FulfillOrdersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FulfillOrdersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FulfillOrdersResult" nillable="true" type="q50:FulfillOrdersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="CancelOrderRequese" nillable="true" type="q51:CancelOrderRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="CancelOrderResult" nillable="true" type="q52:CancelOrderResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommitFallOutCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RegionID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommitFallOutCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="GetCommitFallOutCountryResult" nillable="true" type="q53:ArrayOfCommitFallOutCountry" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCommitDetailsPropogated">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProductCountryId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchCommitDetailsPropogatedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Dell.AvailableToSell.Services.Dashboard" minOccurs="0" name="FetchCommitDetailsPropogatedResult" nillable="true" type="q54:ArrayOfReservationDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
