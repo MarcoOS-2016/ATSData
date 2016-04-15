@@ -21,3 +21,4 @@ E:\6-ATSData\ATSData\bin\ATSData.pdb
 E:\6-ATSData\ATSData\obj\Debug\ATSData.dll
 E:\6-ATSData\ATSData\obj\Debug\ATSData.pdb
 E:\6-ATSData\ATSData\obj\Debug\GIC.ATSDataWebService.csprojResolveAssemblyReference.cache
+D:\Working\WorkShop\Projects\6-ATSData\ATSData\obj\Debug\GIC.ATSDataWebService.csprojResolveAssemblyReference.cache

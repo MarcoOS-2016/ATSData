@@ -307,7 +307,7 @@ namespace MainForm
 
         private void testButton_Click(object sender, EventArgs e)
         {
-            ReportHandler handler = new ReportHandler("ATS_BACKLOG_ORDER");
+            ReportHandler handler = new ReportHandler("ATS_ONHANDBYLOCATION", "AMER");
             handler.Process();
         }
     }

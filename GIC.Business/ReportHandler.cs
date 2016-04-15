@@ -74,7 +74,8 @@ namespace GIC.Business
     public class ReportHandler
     {
         public static GIC_Context GIC_Context = new GIC_Context();
-        private string reportname = string.Empty;
+        private string reportname;
+        private string regionname;
 
         public string ReportName
         {
@@ -82,9 +83,21 @@ namespace GIC.Business
             get { return this.reportname; }
         }
 
+        public string RegionName
+        {
+            set { this.regionname = value; }
+            get { return this.regionname; }
+        }
+
         public ReportHandler(string reportName)
         {
             this.reportname = reportName;
+        }
+
+        public ReportHandler(string reportName, string region)
+        {
+            this.reportname = reportName;
+            this.regionname = region;            
         }
 
         public void Process()
@@ -138,13 +151,19 @@ namespace GIC.Business
             }
         }
 
+        #region ----- Fetch On-hand inventory by Location via ATS Web service -----
         private void GetOnhandByLocationInformation()
         {
             Console.WriteLine(string.Format("[{0}] - Starting to fetch ATS On-hand inventory data with location via calling ATS Web Service...",
                         DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             MiscUtility.LogHistory("Starting to fetch ATS On-hand inventory data with location via calling ATS Web Service...");
 
-            string countryCodeList = ConfigFileUtility.GetValue("EMEACountryCodeList");
+            string countryCodeList = string.Empty;
+
+            if (this.RegionName.Contains("EMEA"))
+                countryCodeList = ConfigFileUtility.GetValue("EMEACountryCodeList");
+            else if (this.RegionName.Contains("AMER"))
+                countryCodeList = ConfigFileUtility.GetValue("AMERCountryCodeList");
 
             ATSData.DashboardService.DashboardRequest dashboardrequest = new DashboardRequest();
             dashboardrequest.CountryId = 0;
@@ -218,10 +237,11 @@ namespace GIC.Business
             }
 
             GIC_Context.ATSDataTable = datatable;
-
+            
             Console.WriteLine(string.Format("[{0}] - Done!", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             MiscUtility.LogHistory("Done!");
         }
+        #endregion
 
         private void GetFacilityData()
         {
@@ -244,6 +264,7 @@ namespace GIC.Business
             GIC_Context.RegionItems = regionItems;
         }
 
+        #region ----- Fetch On-hand inventory data via ATS Web service -----
         private void FetchOnHandInventoryData()
         {
             Console.WriteLine(string.Format("[{0}] - Starting to fetch ATS On-hand inventory data via calling ATS Web Service...",
@@ -327,7 +348,9 @@ namespace GIC.Business
             Console.WriteLine(string.Format("[{0}] - Done!", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             MiscUtility.LogHistory("Done!");
         }
+        #endregion
 
+        #region ----- Fetch In-Transit inventory data via ATS Web service -----
         private void FetchInTransitInventoryData()
         {
             Console.WriteLine(string.Format("[{0}] - Starting to fetch ATS In-Transit inventory data via calling ATS Web Service...",
@@ -374,7 +397,9 @@ namespace GIC.Business
             Console.WriteLine(string.Format("[{0}] - Done!", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             MiscUtility.LogHistory("Done!");
         }
+        #endregion
 
+        #region ----- Fetch Backlog Orders via ATS Web service -----
         private void FetchBacklogOrders()
         {
             Console.WriteLine(string.Format("[{0}] - Starting to fetch ATS Committed Orders via ATS Web Service...",
@@ -476,7 +501,9 @@ namespace GIC.Business
             Console.WriteLine(string.Format("[{0}] - Done!", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             MiscUtility.LogHistory("Done!");
         }
+        #endregion
 
+        #region ----- Get FallOut Orders via ATS Web service -----
         private void GetFallOutOrders()
         {
             ATSData.ProductService.ProductServiceClient client = new ProductServiceClient();
@@ -514,13 +541,15 @@ namespace GIC.Business
             Console.WriteLine(string.Format("[{0}] - Done!", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")));
             MiscUtility.LogHistory("Done!");
         }
+        #endregion
 
         #region ----- Export ATS data into an Excel file -----
         private void ExportDataIntoExcelFile(string filename)
         {
             string dayOfWeek = DateTime.Now.DayOfWeek.ToString();
             //string fileName = string.Format("{0}_{1}.xlsx", filename, DateTime.Now.ToString("yyyyMMdd_HHmmss"));
-            string fileName = string.Format("{0}_{1}.xlsx", filename, dayOfWeek.Substring(0, 3));
+            
+            string fileName = string.Format("{0}_{1}_{2}.xlsx", this.RegionName, filename, dayOfWeek.Substring(0, 3));
             string fullFileName = Path.Combine(ConfigFileUtility.GetValue("OutputFolder"), fileName);
             string moveToTargetFolder = ConfigFileUtility.GetValue("MoveToTargetFolder");
 

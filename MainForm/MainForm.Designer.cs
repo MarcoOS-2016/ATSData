@@ -218,7 +218,7 @@
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ATS Data (Ver.20151103)";
+            this.Text = "ATS Data (Ver.04142016)";
             ((System.ComponentModel.ISupportInitialize)(this.ATSDataGridView)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();

@@ -23,7 +23,7 @@ namespace MainForm
             }
             else
             {
-                ReportHandler handler = new ReportHandler(args[0].ToUpper());
+                ReportHandler handler = new ReportHandler(args[0].ToUpper(), args[1].ToUpper());
                 //Console.WriteLine(args[0].ToUpper());
                 handler.Process();
             }
